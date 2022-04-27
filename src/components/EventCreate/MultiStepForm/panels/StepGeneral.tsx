@@ -2,23 +2,13 @@ import { Flex, FormLabel, Heading, InputGroup, VStack } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 import PrimaryButton from '../../../base/PrimaryButton';
 import { FormInput } from '../../../Form/FormInput';
-import {
-  CreateEventFormFields,
-  useCreateEventStore,
-} from '../../useCreateEventStore';
+import { CreateEventFormFields, useCreateEventStore } from '../../useCreateEventStore';
 import shallow from 'zustand/shallow';
 import { useRouter } from 'next/router';
 import { FormSelect } from '../../../Form/FormSelect';
-import {
-  CATEGORIES,
-  CATEGORY_OPTIONS,
-  OptionType,
-} from '../../../../lib/constants';
+import { CATEGORIES, CATEGORY_OPTIONS, OptionType } from '../../../../lib/constants';
 
-export type StepGeneralInput = Pick<
-  CreateEventFormFields,
-  'title' | 'description' | 'category'
->;
+export type StepGeneralInput = Pick<CreateEventFormFields, 'title' | 'description' | 'category'>;
 
 export default function StepGeneral() {
   const state = useCreateEventStore(
@@ -45,21 +35,11 @@ export default function StepGeneral() {
   };
 
   return (
-    <VStack
-      as={'form'}
-      onSubmit={handleSubmit(onSubmit)}
-      gap={5}
-      px={{ base: 2, md: '30%' }}
-    >
+    <VStack as={'form'} onSubmit={handleSubmit(onSubmit)} gap={5} px={{ base: 2, md: '30%' }}>
       <Heading size={'lg'}>Describe your event</Heading>
 
-      <Flex
-        justifyItems={'stretch'}
-        width={'100%'}
-        alignItems={'flex-end'}
-        gap={10}
-      >
-        <FormInput<StepGeneralInput>
+      <Flex justifyItems={'stretch'} width={'100%'} alignItems={'flex-end'} gap={10}>
+        <FormInput
           name="title"
           errors={errors}
           register={register}
@@ -74,22 +54,19 @@ export default function StepGeneral() {
             },
             pattern: {
               value: /^[a-z0-9!. ]+$/i,
-              message:
-                'Title can only contain letters, exclamation points, spaces and full stop.',
+              message: 'Title can only contain letters, exclamation points, spaces and full stop.',
             },
           }}
           flex={2}
         />
-        <FormSelect<StepGeneralInput>
+        <FormSelect
           name="category"
           control={control}
           options={CATEGORY_OPTIONS}
           title={'Category'}
           errors={errors}
           isRequired
-          defaultSelectValue={CATEGORY_OPTIONS.find(
-            (o) => o.value === state.category
-          )}
+          defaultSelectValue={CATEGORY_OPTIONS.find((o) => o.value === state.category)}
           rules={{
             required: 'Field is required',
           }}
@@ -97,7 +74,7 @@ export default function StepGeneral() {
         />
       </Flex>
 
-      <FormInput<StepGeneralInput>
+      <FormInput
         name="description"
         errors={errors}
         register={register}
