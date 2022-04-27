@@ -1,0 +1,7 @@
+subscription EnrollmentRequestDeclined($username: String!) {
+  enrollmentRequestDeclined(username: $username) {
+    eventId
+    state
+    username
+  }
+}

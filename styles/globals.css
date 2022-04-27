@@ -1,0 +1,40 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+}
+
+body {
+  background: red;
+  height: 100vh;
+  width: 100%;
+}
+
+*:focus {
+  box-shadow: none !important;
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.custom-img {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.unset-img {
+  width: 100%;
+}
+.unset-img > div {
+  position: unset !important;
+}
+
+canvas.mapboxgl-canvas {
+  width: 100% !important;
+  height: 100% !important
+}

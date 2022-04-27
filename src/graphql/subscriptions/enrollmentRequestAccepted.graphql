@@ -1,0 +1,7 @@
+subscription EnrollmentRequestAccepted($username: String!) {
+  enrollmentRequestAccepted(username: $username) {
+    eventId
+    state
+    username
+  }
+}

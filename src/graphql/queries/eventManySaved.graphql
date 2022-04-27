@@ -1,0 +1,12 @@
+query EventManySaved {
+  eventManySaved {
+    id
+    title
+    dateFrom
+    imageUrl
+    address
+    category
+    longitude
+    latitude
+  }
+}

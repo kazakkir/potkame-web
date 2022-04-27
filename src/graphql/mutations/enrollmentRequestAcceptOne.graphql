@@ -1,0 +1,3 @@
+mutation EnrollmentRequestAcceptOne($eventId: String!, $username: String!) {
+  enrollmentRequestAcceptOne(username: $username, eventId: $eventId)
+}

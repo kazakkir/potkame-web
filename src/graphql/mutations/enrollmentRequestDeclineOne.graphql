@@ -1,0 +1,3 @@
+mutation EnrollmentRequestDeclineOne($eventId: String!, $username: String!) {
+  enrollmentRequestDeclineOne(username: $username, eventId: $eventId)
+}

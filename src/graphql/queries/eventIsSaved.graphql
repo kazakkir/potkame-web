@@ -1,0 +1,3 @@
+query EventIsSaved($eventId: String!) {
+  eventIsSaved(eventId: $eventId)
+}

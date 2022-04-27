@@ -1,0 +1,3 @@
+mutation UnsaveEvent($eventId: String!) {
+  unsaveEvent(eventId: $eventId)
+}

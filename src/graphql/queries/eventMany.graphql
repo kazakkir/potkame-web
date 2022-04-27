@@ -1,0 +1,22 @@
+query EventMany(
+  $date: DateArgs
+  $filters: [WhereArgs!]
+  $orderBy: OrderByArgs
+  $pagination: PaginationArgs
+  $search: SearchArgs
+) {
+  eventMany(date: $date, filters: $filters, orderBy: $orderBy, pagination: $pagination, search: $search) {
+    events {
+      id
+      title
+      dateFrom
+      imageUrl
+      city
+      address
+      category
+      longitude
+      latitude
+    }
+    totalCount
+  }
+}

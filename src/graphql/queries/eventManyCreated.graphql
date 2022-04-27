@@ -1,0 +1,13 @@
+query EventManyCreated {
+  eventManyCreated {
+    id
+    title
+    dateFrom
+    imageUrl
+    city
+    address
+    category
+    longitude
+    latitude
+  }
+}

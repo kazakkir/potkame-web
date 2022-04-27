@@ -1,0 +1,6 @@
+mutation EnrollmentRequestCreate($eventId: String!) {
+  enrollmentRequestCreateOne(eventId: $eventId) {
+    eventId
+    username
+  }
+}

@@ -1,0 +1,7 @@
+query EnrollmentRequestMany {
+  enrollmentRequestMany {
+    eventId
+    username
+    state
+  }
+}

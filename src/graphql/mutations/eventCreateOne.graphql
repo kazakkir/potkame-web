@@ -1,0 +1,9 @@
+mutation CreateEvent($args: CreateEventInput!) {
+  eventCreate(args: $args) {
+    id
+    title
+    description
+    authorUsername
+    private
+  }
+}

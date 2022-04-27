@@ -1,0 +1,25 @@
+query eventOne($id: String!) {
+  eventOne(id: $id) {
+    title
+    description
+    category
+    authorUsername
+    private
+    dateFrom
+    dateTo
+    longitude
+    latitude
+    address
+    imageUrl
+    updatedAt
+    createdAt
+    participants {
+      eventId
+      username
+    }
+    savedBy {
+      eventId
+      username
+    }
+  }
+}

@@ -1,0 +1,7 @@
+query EnrollmentRequestManyAsHost($state: String) {
+  enrollmentRequestManyAsHost(state: $state) {
+    eventId
+    username
+    state
+  }
+}

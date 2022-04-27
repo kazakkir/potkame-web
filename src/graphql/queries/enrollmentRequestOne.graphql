@@ -1,0 +1,7 @@
+query EnrollmentRequestOne($eventId: String!) {
+  enrollmentRequestOne(eventId: $eventId) {
+    eventId
+    username
+    state
+  }
+}
